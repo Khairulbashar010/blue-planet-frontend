@@ -1,0 +1,33 @@
+.menu {
+    @apply w-56 p-4 text-right bg-white opacity-[0.9]  rounded-md;
+}
+
+.menu li {
+    @apply text-right list-item list-none text-black mt-4 font-bold uppercase tracking-widest text-sm;
+}
+.menu li a {
+    @apply border-b-2 border-b-[#00b2e2]
+}
+
+.menu li:hover {
+    @apply text-[#00b2e2] transition ease-out delay-100;
+}
+
+.subMenu li {
+    @apply text-xs;
+}
+
+.menu > li:first-child {
+    @apply mt-0
+}
+
+.menu::before {
+    content: '';
+    border-width: 0 0 20px 40px;
+    border-color: transparent transparent rgba(255,255,255,.9) transparent;
+    @apply absolute top-[-20px] block w-0 h-0 border-solid right-[33px];
+}
+
+.header_phone {
+    @apply inline-block mt-3 mb-3 text-base tracking-widest font-normal ml-3;
+}

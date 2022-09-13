@@ -17,6 +17,14 @@
     @apply text-xs;
 }
 
+.subMenu li:first-child {
+    @apply mt-8;
+}
+
+.subMenu li:last-child {
+    @apply mb-8;
+}
+
 .menu > li:first-child {
     @apply mt-0
 }

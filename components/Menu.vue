@@ -9,7 +9,7 @@
             <ul class="menu">
                 <li><nuxt-link to="/">Home</nuxt-link></li>
                 <li><nuxt-link to="/">About Us</nuxt-link></li>
-                <li @click.stop="toggleSubLink"><nuxt-link to="/">Services</nuxt-link></li>
+                <li @click.stop="toggleSubLink"><nuxt-link to="#"><span>Services</span></nuxt-link> <ChevronDown v-if="!showSubLink"/><ChevronUp v-if="showSubLink"/></li>
                     <ul v-if="showSubLink" class="subMenu">
                         <li> <nuxt-link to="/"> Rehabs</nuxt-link></li>
                         <li><nuxt-link to="/">Short Term Rentals</nuxt-link></li>
@@ -25,11 +25,15 @@
 <script>
 import MenuIcon from './icons/MenuIcon.vue';
 import CloseIcon from './icons/CloseIcon.vue';
+import ChevronUp from './icons/ChevronUpIcon.vue';
+import ChevronDown from './icons/ChevronDownIcon.vue';
 export default {
     components: {
-        MenuIcon,
-        CloseIcon,
-    },
+    MenuIcon,
+    CloseIcon,
+    ChevronUp,
+    ChevronDown,
+},
     data() {
         return {
             showMenu: false,
